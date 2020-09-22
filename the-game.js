@@ -55,15 +55,44 @@ function startGame() {
             island = prompt("Je hebt een water bron gevonden\nMaar je begint ook een beetje honger te krijgen\nZoek eten of maak een hutje");
             if (island == "maak een hutje") {
                 island = prompt("Je hutje is eindelijk klaar maar na zo'n lange dag werken. Heb je nog een keuze\nEten zoeken of een vuurtje maken")
+                if (island == "eten zoeken") {
+                    alert("Helaas\nHet enige wat je kon vinden was een kogelvis. Je had hem alleen verkeerd bereid")
+                } else if (island == "een vuurtje maken") {
+                    alert("Helaas!\nNadat je het vuur had gemaakt, nam de wind toe.\nDoor je vuurtje is het hele eiland afebrandt.")
+                } else {
+                    verkeerd();
+                }
+
             } else if (island == "zoek eten") {
-                alert("Helaas!\nHet ging in de avond stormen, en terwijl je lekker aan het genieten was. Werd je getroffen door bliksem")
+                alert("Helaas!\nHet ging in de avond stormen, en terwijl je lekker aan het genieten was. Werd je getroffen door bliksem");
+            } else {
+                verkeerd();
             }
         } else {
             verkeerd();
         }
-    }
+    }else if(island=="zorg voor onderdak"){
+        island = prompt("Je hebt nu een knus huisje maar nog geen eten of drinken\nZoek eten of zoek drinken")
+        if(island=="zoek eten"){
+            island= prompt("Nu je lekker eten hebt gevonden, sta je voor de volgende keuze\nPoging tot ontsnappen of een vuurtje maken").toLowerCase;
+            if(island=="Poging tot ontsnappen"){
+                alert("Helaas!\nJe probeerde te gaan zwemmen, maar je werd ondergetrokken door de onderstroming en kwam niet meer boven het water uit");
+            }else if(island=="een vuurtje maken"){
+                alert("Helaas\nJe hebt geen water kunnen vinden waardoor je uitdroogde")
+            }else {
+                verkeerd();
+            }
+
+        }else if(island=="zoek drinken"){
+            alert("Helaas!\nJe liep boven op een afgrond, en beneden zag je een plas met water. Je sprong erin, maar het was niet diep genoeg.");
+        }else {
+            verkeerd();
+        }
+    }else {
+            verkeerd();
+        }
 }
 
 function verkeerd() {
-    alert("Verkeerde input, begin opnieuw")
+    alert("Verkeerde input, begin opnieuw");
 }

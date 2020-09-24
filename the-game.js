@@ -1,3 +1,6 @@
+//Stijn Dusseldorp
+//Software Developer
+
 function startGame() {
     var island = prompt("Je wordt wakker op een eiland in het midden van de oceaan.\nJe staat voor een keuze\nZoek resources of zorg voor onderdak").toLowerCase();
     if (island == "zoek resources") {
